@@ -1,0 +1,8 @@
+apiKey: abcd
+accountName: TEST
+authUrl: http://test.url/auth
+tokenTimeOut: 300000
+callbackTimeOut: 300000
+payUrl: http://test.url/pay
+callbackEnabled: false
+statusUrl: http://test.url/status/

@@ -1,0 +1,8 @@
+apiKey: 0aVp83wuFp6wjvQ3
+accountName: SEGOVIA
+authUrl: http://127.0.0.1:7902/auth
+tokenTimeOut: 300000
+callbackTimeOut: 15000
+payUrl: http://127.0.0.1:7902/pay
+callbackEnabled: true
+statusUrl: http://127.0.0.1:7902/status/
