@@ -40,6 +40,9 @@ In case the callbacks are disabled from the beginning, it will keep polling the 
 
 All the timeout parameters and toggles are defined in application.yml so they can be changed in the Configuration
 
+
+The Callback API has been documented in Swagger and can be accessed at http://localhost:8080/swagger-ui.html .
+
 ### Design Decisions
 - I have chosen java and Springboot to complete this assignment
 - Why I chose Springboot and structured my code this way?
