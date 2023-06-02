@@ -1,5 +1,7 @@
 package com.segovia.interview.paymentclient.service;
 import com.segovia.interview.paymentclient.model.*;
+import com.segovia.interview.paymentclient.service.impl.PaymentProcessorImpl;
+import com.segovia.interview.paymentclient.service.impl.SessionTokenManagerImpl;
 import com.segovia.interview.paymentclient.util.CsvHelper;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,22 +17,22 @@ import java.util.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
-public class PaymentProcessorTest {
+public class PaymentProcessorImplTest {
     @Mock
     private RestTemplate restTemplate;
 
     @Mock
-    private SessionTokenManager sessionTokenManager;
+    private SessionTokenManagerImpl sessionTokenManager;
 
     @Mock
     private CsvHelper csvHelper;
 
-    private PaymentProcessor paymentProcessor;
+    private PaymentProcessorImpl paymentProcessor;
 
     @Before
     public void setup() {
         MockitoAnnotations.openMocks(this);
-        paymentProcessor = new PaymentProcessor(restTemplate, sessionTokenManager, csvHelper);
+        paymentProcessor = new PaymentProcessorImpl(restTemplate, sessionTokenManager, csvHelper);
         ReflectionTestUtils.setField(paymentProcessor, "payUrl", "mockedPayUrl");
     }
 
