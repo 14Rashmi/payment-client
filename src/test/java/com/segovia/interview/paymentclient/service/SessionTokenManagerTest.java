@@ -1,5 +1,6 @@
 package com.segovia.interview.paymentclient.service;
 
+import com.segovia.interview.paymentclient.service.impl.SessionTokenManagerImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,19 +15,19 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SessionTokenManagerTest {
+public class SessionTokenManagerImplTest {
 
     @Mock
     private RestTemplate restTemplate;
 
-    private SessionTokenManager sessionTokenManager;
+    private SessionTokenManagerImpl sessionTokenManager;
 
     String authUrl = "http://example.com/auth";
 
     @Before
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        sessionTokenManager = new SessionTokenManager(restTemplate);
+        sessionTokenManager = new SessionTokenManagerImpl(restTemplate);
         ReflectionTestUtils.setField(sessionTokenManager, "authUrl", authUrl);
         ReflectionTestUtils.setField(sessionTokenManager, "tokenTimeOut", 4000);
     }
