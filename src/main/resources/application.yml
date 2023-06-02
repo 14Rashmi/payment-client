@@ -6,3 +6,5 @@ callbackTimeOut: 15000
 payUrl: http://127.0.0.1:7902/pay
 callbackEnabled: true
 statusUrl: http://127.0.0.1:7902/status/
+callBackUrl: http://host.docker.internal:8080/api/callback
+pollDelay: 60000
